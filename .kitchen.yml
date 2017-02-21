@@ -1,0 +1,63 @@
+---
+driver:
+  # using vagrant to test
+  name: vagrant
+  privileged: true
+
+provisioner:
+  # use an ansible playbook to provision our server
+  name: ansible_playbook
+  # name of the host
+  hosts: test-kitchen
+  playbook: test/integration/default/default.yml
+
+  ansible_connction: ssh
+#  ansible_verbose: true
+#  ansible_verbosity: 4
+  # Shows diffs for each templated file if yhese files are changing
+  ansible_diff: true
+  # $ ANSIBLE_EXTRA_FLAGS='--start-at-task="myrole | name of last working instruction"' kitchen converge
+  #ansible_extra_flags: <%= ENV['ANSIBLE_EXTRA_FLAGS'] %>
+
+  # Galaxy reqs
+  # list of ansible galaxy requirements from the roles meta/main.yml
+  #requirements_path: dependencies.yml
+
+  require_ansible_omnibus: false
+  equire_ansible_source: false
+  require_pip: false
+  require_ansible_repo: true
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+
+platforms:
+#  - name: ubuntu-16.10
+#    driver:
+#      customize:
+#        memory: 512
+#  - name: ubuntu-16.04
+#    driver:
+#      customize:
+#        memory: 512
+#  - name: centos-7.3
+#    driver:
+#      customize:
+#        memory: 512
+  - name: centos-7.2
+    driver:
+      customize:
+        memory: 512
+  - name: centos-7.1
+    driver:
+      customize:
+        memory: 512
+
+verifier:
+  name: serverspec
+
+suites:
+  - name: default
+    verifier:
+      default_pattern: true
+      remote_exec: false
+      default_path: test/integration/default/serverspec
