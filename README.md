@@ -27,19 +27,19 @@ bundle exec kitchen test -c
 ToDo
 ----
 
-* [link](TODO.md "ToDo Item List")
+* [ToDo Item List](TODO.md "ToDo Item List")
 
 Related Links
 -------------
 
-* [link](https://github.com/test-kitchen/test-kitchen "Kitchen-CI")
-* [link](https://github.com/test-kitchen/kitchen-vagrant "Vagrant Driver")
-* [link](https://github.com/test-kitchen/kitchen-docker "Docker Driver")
-* [link](https://github.com/neillturner/kitchen-ansible "Ansible Provisioner")
-* [link](https://github.com/neillturner/kitchen-puppet "Puppet Provisioner")
-* [link](https://github.com/neillturner/kitchen-verifier-serverspec "Serverspec Verifier")
-* [link](http://serverspec.org/resource_types.html "ServerSpec")
-* [link](https://github.com/sj26/rspec_junit_formatter "RSpec JUnit Formatter")
+* [Kitchen-CI](https://github.com/test-kitchen/test-kitchen "Kitchen-CI")
+* [Vagrant Driver](https://github.com/test-kitchen/kitchen-vagrant "Vagrant Driver")
+* [Docker Driver](https://github.com/test-kitchen/kitchen-docker "Docker Driver")
+* [Ansible Provisioner](https://github.com/neillturner/kitchen-ansible "Ansible Provisioner")
+* [Puppet Provisioner](https://github.com/neillturner/kitchen-puppet "Puppet Provisioner")
+* [Serverspec Verifier](https://github.com/neillturner/kitchen-verifier-serverspec "Serverspec Verifier")
+* [ServerSpec](http://serverspec.org/resource_types.html "ServerSpec")
+* [RSpec JUnit Formatter](https://github.com/sj26/rspec_junit_formatter "RSpec JUnit Formatter")
 
 License
 -------
@@ -49,5 +49,5 @@ GPLv3
 Author Information
 ------------------
 
-* [link](https://github.com/isindir "Github account").
-* [link](https://galaxy.ansible.com/wtanaka/ "Compatability code inherited from wtanaka.inkscape role")
+* [Github account](https://github.com/isindir "Github account").
+* [Compatability code inherited from wtanaka.inkscape role](https://galaxy.ansible.com/wtanaka/ "Compatability code inherited from wtanaka.inkscape role")
