@@ -31,18 +31,18 @@ provisioner:
   require_ruby_for_busser: false
 
 platforms:
-#  - name: ubuntu-16.10
-#    driver:
-#      customize:
-#        memory: 512
-#  - name: ubuntu-16.04
-#    driver:
-#      customize:
-#        memory: 512
-#  - name: centos-7.3
-#    driver:
-#      customize:
-#        memory: 512
+  - name: ubuntu-16.10
+    driver:
+      customize:
+        memory: 512
+  - name: ubuntu-16.04
+    driver:
+      customize:
+        memory: 512
+  - name: centos-7.3
+    driver:
+      customize:
+        memory: 512
   - name: centos-7.2
     driver:
       customize:
@@ -61,3 +61,6 @@ suites:
       default_pattern: true
       remote_exec: false
       default_path: test/integration/default/serverspec
+      format: 'progress'
+      color: true
+      extra_flags: '--format RspecJunitFormatter  --out .kitchen/rspec.xml'

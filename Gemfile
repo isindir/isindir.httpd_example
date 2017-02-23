@@ -15,4 +15,5 @@ group :integration do
   gem 'serverspec'
   # https://github.com/neillturner/kitchen-verifier-serverspec
   gem 'kitchen-verifier-serverspec'
+  gem 'rspec_junit_formatter'
 end

@@ -19,8 +19,27 @@ Example Use
 
 ```
 bundle install
+bundle exec kitchen list
 bundle exec kitchen test
+bundle exec kitchen test -c
 ```
+
+ToDo
+----
+
+* [link](TODO.md "ToDo Item List")
+
+Related Links
+-------------
+
+* [link](https://github.com/test-kitchen/test-kitchen "Kitchen-CI")
+* [link](https://github.com/test-kitchen/kitchen-vagrant "Vagrant Driver")
+* [link](https://github.com/test-kitchen/kitchen-docker "Docker Driver")
+* [link](https://github.com/neillturner/kitchen-ansible "Ansible Provisioner")
+* [link](https://github.com/neillturner/kitchen-puppet "Puppet Provisioner")
+* [link](https://github.com/neillturner/kitchen-verifier-serverspec "Serverspec Verifier")
+* [link](http://serverspec.org/resource_types.html "ServerSpec")
+* [link](https://github.com/sj26/rspec_junit_formatter "RSpec JUnit Formatter")
 
 License
 -------
@@ -30,4 +49,5 @@ GPLv3
 Author Information
 ------------------
 
-https://github.com/isindir
+* [link](https://github.com/isindir "Github account").
+* [link](https://galaxy.ansible.com/wtanaka/ "Compatability code inherited from wtanaka.inkscape role")
