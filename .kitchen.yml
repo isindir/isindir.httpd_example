@@ -9,7 +9,6 @@ provisioner:
   name: ansible_playbook
   # name of the host
   hosts: test-kitchen
-  playbook: test/integration/default/default.yml
 
   ansible_connction: ssh
 #  ansible_verbose: true
@@ -54,13 +53,15 @@ platforms:
 
 verifier:
   name: serverspec
+  default_pattern: true
+  remote_exec: false
+  format: 'progress'
+  color: true
 
 suites:
   - name: default
+    provisioner:
+      playbook: test/integration/default/default.yml
     verifier:
-      default_pattern: true
-      remote_exec: false
       default_path: test/integration/default/serverspec
-      format: 'progress'
-      color: true
-      extra_flags: '--format RspecJunitFormatter  --out .kitchen/rspec.xml'
+      extra_flags: '--format RspecJunitFormatter --out .kitchen/default_rspec.xml'
