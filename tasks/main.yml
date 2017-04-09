@@ -4,13 +4,13 @@
 - include: include_vars.yml
 
 # Install EPEL
-- include: epel.yml
+- include: t_epel.yml
   when: ansible_distribution == 'CentOS'
 
-- include: Debian.yml
+- include: t_Debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: RedHat.yml
+- include: t_RedHat.yml
   when: ansible_os_family == 'RedHat'
 
 - include: install_package_names.yml
